@@ -1,0 +1,38 @@
+docker run -itd -p 8888:8888 -p 4040:4040 -v C:\Users\91842\.aws:/home/glue_user/.aws:rw -v C:\Users\91842\jupyter_data:/home/glue_user/data -e DISABLE_SSL=true --name glue3.0 amazon/aws-glue-libs:glue_libs_3.0.0_image_01 /home/glue_user/jupyter/jupyter_start.sh
+
+
+
+
+
+
+Access to Active MQ (ActiveMQ broker details)
+New Events Queue comprising all the events from FAST (cost implications)
+Access to Pilotfish App which consumes the Events (to undersand the XSLT processor)
+Is the current event archiver getting the parsed messages?
+
+Deep dive session for Reference App written Apache Camel (consumes from Solace which is consuming from ActiveMQ)
+https://gitlab.com/aaa-life/applications/enterprise-integration/message-archiver 
+CPU & memory the app is using
+Events rate: average/max, message size average/max
+
+Another App 
+https://gitlab.com/aaa-life/applications/enterprise-integration/financial-reporting
+
+New App to consume from Active MQ and write to S3 athena tables
+How about https://github.com/jasonrbriggs/stomp.py (Linked here: https://activemq.apache.org/cross-language-clients)
+
+https://www.middlewareinventory.com/blog/aws-activemq-python-stomp-example/https://ameyanekar.medium.com/create-an-activemq-client-using-python-c532b6f91074Needs
+ cert
+https://aws.amazon.com/blogs/compute/integrating-amazon-mq-with-other-aws-services-via-apache-camel/
+
+https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/getting-started-activemq.html
+Github+Github Actions, deploy to EKS (which cluster, cloud team discussion)
+
+Decide architecture and get approval
+
+Acquire S3 location and access info for pre-prod
+
+Storage considerations:
+Athena table, partition info (how are we storing in SQL db currently)
+
+
